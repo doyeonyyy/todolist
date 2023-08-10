@@ -10,7 +10,7 @@ import Foundation
 struct TaskList {
     static var list: [Task] = [
         Task(id: 0, title: "Swift 공식문서 읽기", isCompleted: false),
-        Task(id: 1, title: "UIKit 공식문서 찾아보기", isCompleted: true),
+        Task(id: 1, title: "UIKit 공식문서 찾아보기", isCompleted: false),
     ]
     static func completeList() -> [Task] {
         return list.filter{ $0.isCompleted == true }
