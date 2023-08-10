@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="152" y="-9"/>
         </scene>
-        <!--View Controller-->
+        <!--Todo Complete View Controller-->
         <scene sceneID="Nta-iT-4Pm">
             <objects>
-                <viewController id="Otn-we-Zo9" sceneMemberID="viewController">
+                <viewController id="Otn-we-Zo9" customClass="TodoCompleteViewController" customModule="todolist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dq1-VG-hAb">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,7 +77,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6K8-uc-q4D">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="6K8-uc-q4D" customClass="TodoCompleteTableViewCell" customModule="todolist" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6K8-uc-q4D" id="DOo-Hm-ga5">
@@ -86,16 +86,23 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Otn-we-Zo9" id="BjR-aG-KDP"/>
+                                    <outlet property="delegate" destination="Otn-we-Zo9" id="T2k-hh-HVD"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3BP-lp-TdB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="1Vs-ci-IJT"/>
+                    <connections>
+                        <outlet property="tableView" destination="1hc-nR-Pdb" id="3mS-1B-0XM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V3j-NF-hnc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="166" y="677"/>
+            <point key="canvasLocation" x="151.90839694656489" y="694.36619718309862"/>
         </scene>
         <!--Todo List View Controller-->
         <scene sceneID="b83-mC-UKy">
@@ -128,7 +135,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="taskSwitch" destination="JpR-HN-kjn" id="ghC-6P-oUU"/>
-                                            <segue destination="QpM-Pk-B9i" kind="show" id="BJH-Ur-5f4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -155,22 +161,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GtE-Oa-xND" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="820.61068702290072" y="-9.1549295774647899"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="iDu-6M-K4l">
-            <objects>
-                <viewController id="QpM-Pk-B9i" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="puW-vy-5Gq">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="j3F-uq-Uhi"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="4Id-J5-Tbo"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SOm-bl-SHF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1486" y="-9"/>
         </scene>
     </scenes>
     <resources>

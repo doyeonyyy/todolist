@@ -1,10 +1,3 @@
-//
-//  TodoListViewController.swift
-//  todolist
-//
-//  Created by t2023-m0047 on 2023/08/09.
-//
-
 import UIKit
 
 class TodoListViewController: UIViewController {
@@ -47,7 +40,9 @@ class TodoListViewController: UIViewController {
             }
         }
         let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
-        alertController .addAction(addAction)
+        alertController.addAction(addAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
     }
 }
 
