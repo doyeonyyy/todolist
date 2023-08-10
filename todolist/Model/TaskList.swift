@@ -1,10 +1,3 @@
-//
-//  TaskList.swift
-//  todolist
-//
-//  Created by t2023-m0047 on 2023/08/09.
-//
-
 import Foundation
 
 struct TaskList {
@@ -23,13 +16,13 @@ struct TaskList {
             }
         }
     }
-    static func editTask(task: Task, title: String) {
-        for index in 0 ..< list.count {
-            if list[index].id == task.id {
-                list[index].title = title
-            }
-        }
-    }
+//    static func editTask(task: Task, title: String) {
+//        for index in 0 ..< list.count {
+//            if list[index].id == task.id {
+//                list[index].title = title
+//            }
+//        }
+//    }
     static func deleteTask(task: Task) {
         list.removeAll(where: {$0.id == task.id})
     }
