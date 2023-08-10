@@ -18,7 +18,7 @@ class TodoListTableViewCell: UITableViewCell {
         if taskSwitch.isOn {
             textLabel?.text = nil
             textLabel?.attributedText =
-//                task.title.strikeThrough()
+                task.title.strikeThrough()
             TaskList.completeTask(task: task, isCompleted: true)
         } else {
             textLabel?.attributedText = nil
@@ -33,7 +33,7 @@ class TodoListTableViewCell: UITableViewCell {
         if task.isCompleted {
             textLabel?.text = nil
             textLabel?.attributedText =
-//            task.title.strikeThrough()
+            task.title.strikeThrough()
         } else {
             textLabel?.attributedText = nil
             textLabel?.text = task.title

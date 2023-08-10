@@ -22,14 +22,14 @@ class TodoListViewController: UIViewController {
         self.tableView?.reloadData()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let cell = sender as? TodoListTableViewCell else { return }
-        if segue.identifier == "detail" {
-            if let vc = segue.destination as? TodoDetailViewController {
-                vc.task = cell.task
-            }
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let cell = sender as? TodoListTableViewCell else { return }
+//        if segue.identifier == "detail" {
+//            if let vc = segue.destination as? TodoDetailViewController {
+//                vc.task = cell.task
+//            }
+//        }
+//    }
     
     @IBAction func didTapAdd(_ sender: Any) {
         let alertController = UIAlertController(title: "할 일 추가", message: nil, preferredStyle: .alert)
@@ -66,7 +66,7 @@ extension TodoListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt
                    indexPath: IndexPath) -> UITableViewCell {
         let cell =
-        tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TodoListTableViewCell cell.setTask(TaskList.list[indexPath.row])
+        tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TodoListTableViewCell; cell.setTask(TaskList.list[indexPath.row])
         return cell
     }
 }
