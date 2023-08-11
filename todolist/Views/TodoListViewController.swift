@@ -46,13 +46,6 @@ class TodoListViewController: UIViewController {
     }
 }
 
-extension TodoListViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt
-                   indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-}
-
 extension TodoListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
@@ -63,5 +56,21 @@ extension TodoListViewController: UITableViewDataSource {
         let cell =
         tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TodoListTableViewCell; cell.setTask(TaskList.list[indexPath.row])
         return cell
+    }
+    
+//    💡 ⬇️ 에디팅 스타일이 delete이면 리스트에서 제거하는 함수 ⬇️
+    
+        func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            if editingStyle == .delete {
+                TaskList.list.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+        }
+}
+
+extension TodoListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt
+                   indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
