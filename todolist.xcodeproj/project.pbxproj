@@ -20,6 +20,7 @@
 		636D17D42A836EC900DA0EA2 /* TodoCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636D17D32A836EC900DA0EA2 /* TodoCompleteViewController.swift */; };
 		636D17E22A83703D00DA0EA2 /* TodoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636D17E12A83703D00DA0EA2 /* TodoListTableViewCell.swift */; };
 		636D17E42A83705300DA0EA2 /* TodoCompleteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636D17E32A83705300DA0EA2 /* TodoCompleteTableViewCell.swift */; };
+		63A3D5FD2A96F30900A7CA8A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 63A3D5FC2A96F30900A7CA8A /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63A3D5FD2A96F30900A7CA8A /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,13 +74,12 @@
 			children = (
 				636D17B52A836DC000DA0EA2 /* AppDelegate.swift */,
 				636D17B72A836DC000DA0EA2 /* SceneDelegate.swift */,
-				636D17D92A836EF400DA0EA2 /* Views */,
-				636D17BB2A836DC000DA0EA2 /* Main.storyboard */,
-				636D17BE2A836DC100DA0EA2 /* Assets.xcassets */,
-				636D17C02A836DC100DA0EA2 /* LaunchScreen.storyboard */,
-				636D17C32A836DC100DA0EA2 /* Info.plist */,
-				636D17D02A836E3D00DA0EA2 /* Utils */,
 				636D17CD2A836E1400DA0EA2 /* Model */,
+				636D17D92A836EF400DA0EA2 /* Views */,
+				636D17E02A83701400DA0EA2 /* Cells */,
+				636D17D02A836E3D00DA0EA2 /* Utils */,
+				636D17BE2A836DC100DA0EA2 /* Assets.xcassets */,
+				636D17C32A836DC100DA0EA2 /* Info.plist */,
 			);
 			path = todolist;
 			sourceTree = "<group>";
@@ -103,10 +104,9 @@
 		636D17D92A836EF400DA0EA2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				636D17E02A83701400DA0EA2 /* Cells */,
-				636D17B92A836DC000DA0EA2 /* TodoViewController.swift */,
-				636D17D12A836EAF00DA0EA2 /* TodoListViewController.swift */,
-				636D17D32A836EC900DA0EA2 /* TodoCompleteViewController.swift */,
+				636D17C02A836DC100DA0EA2 /* LaunchScreen.storyboard */,
+				636D17BB2A836DC000DA0EA2 /* Main.storyboard */,
+				6374AE332A9C675C0009B69E /* Controller */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -118,6 +118,16 @@
 				636D17E32A83705300DA0EA2 /* TodoCompleteTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		6374AE332A9C675C0009B69E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				636D17B92A836DC000DA0EA2 /* TodoViewController.swift */,
+				636D17D12A836EAF00DA0EA2 /* TodoListViewController.swift */,
+				636D17D32A836EC900DA0EA2 /* TodoCompleteViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +146,9 @@
 			dependencies = (
 			);
 			name = todolist;
+			packageProductDependencies = (
+				63A3D5FC2A96F30900A7CA8A /* Alamofire */,
+			);
 			productName = todolist;
 			productReference = 636D17B22A836DC000DA0EA2 /* todolist.app */;
 			productType = "com.apple.product-type.application";
@@ -164,6 +177,9 @@
 				Base,
 			);
 			mainGroup = 636D17A92A836DC000DA0EA2;
+			packageReferences = (
+				63A3D5FB2A96F30900A7CA8A /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 636D17B32A836DC000DA0EA2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -418,6 +434,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		63A3D5FB2A96F30900A7CA8A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		63A3D5FC2A96F30900A7CA8A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63A3D5FB2A96F30900A7CA8A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 636D17AA2A836DC000DA0EA2 /* Project object */;
 }
