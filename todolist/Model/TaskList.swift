@@ -38,27 +38,27 @@ struct TaskList {
         }
         updateTaskList(list)
     }
-//    static func editTitle(task: Task, title: String) {
-//        var list = Self.taskList()
-//        for index in 0 ..< list.count {
-//            if list[index].id == task.id {
-//                list[index].title = title
-//            }
-//        }
-//        updateTaskList(list)
-//    }
-//    static func editCategory(task: Task, category: TaskCategory) {
-//        var list = Self.taskList()
-//        for index in 0 ..< list.count {
-//            if list[index].id == task.id {
-//                list[index].category = category
-//            }
-//        }
-//        updateTaskList(list)
-//    }
-//    static func deleteTask(task: Task) {
-//        var list = Self.taskList()
-//        list.removeAll(where: {$0.id == task.id})
-//        updateTaskList(list)
-//    }
+    static func editTitle(task: Task, title: String) {
+        var list = Self.taskList()
+        for index in 0 ..< list.count {
+            if list[index].id == task.id {
+                list[index].title = title
+            }
+        }
+        updateTaskList(list)
+    }
+    static func editCategory(task: Task, category: TaskCategory) {
+        var list = Self.taskList()
+        for index in 0 ..< list.count {
+            if list[index].id == task.id {
+                list[index].category = category
+            }
+        }
+        updateTaskList(list)
+    }
+    static func deleteTask(task: Task) {
+        var list = Self.taskList()
+        list.removeAll(where: {$0.id == task.id})
+        updateTaskList(list)
+    }
 }
